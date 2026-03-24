@@ -121,6 +121,7 @@ footer {
   border-radius: 8px;
 }
 
+/* Lightbox (fullscreen viewer) */
 .lightbox {
   display: none;
   position: fixed;
