@@ -110,3 +110,13 @@ footer {
   }
 }
 
+.project-card .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+}
