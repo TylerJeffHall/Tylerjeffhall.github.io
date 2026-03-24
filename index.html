@@ -5,35 +5,6 @@
   <title>Tyler Hall | Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
-<div id="lightbox" class="lightbox">
-  <span class="close">&times;</span>
-  <img class="lightbox-content" id="lightbox-img">
-</div>
-
-<script>
-  const images = document.querySelectorAll("img"); // ← grabs ALL images
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-  const closeBtn = document.querySelector(".close");
-
-  images.forEach(img => {
-    img.style.cursor = "pointer"; // shows it's clickable
-
-    img.addEventListener("click", () => {
-      lightbox.style.display = "flex";
-      lightboxImg.src = img.src;
-    });
-  });
-
-  closeBtn.onclick = () => {
-    lightbox.style.display = "none";
-  };
-
-  lightbox.onclick = () => {
-    lightbox.style.display = "none";
-  };
-</script>
   
 <body>
 
@@ -125,6 +96,36 @@
 <footer>
   <p>© Your Name</p>
 </footer>
+
+<!-- Fullscreen Image Viewer -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+
+<script>
+  const images = document.querySelectorAll("img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.querySelector(".close");
+
+  images.forEach(img => {
+    img.style.cursor = "pointer";
+
+    img.addEventListener("click", () => {
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.onclick = () => {
+    lightbox.style.display = "none";
+  };
+
+  lightbox.onclick = () => {
+    lightbox.style.display = "none";
+  };
+</script>
 
 </body>
 </html>
